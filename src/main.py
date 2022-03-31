@@ -1,6 +1,7 @@
 import sys
 import os
 import discord
+
 TOKEN = "OTU5MDM5NDIzMzU2NDc3NTAw.YkWFEA.LIIffq4hY2F0kyAPBeQmNr8DKEg"
 
 client = discord.Client()
@@ -112,4 +113,4 @@ async def on_message(message):
         await message.delete()
         await message.channel.send('Exiting Bot.. https://tenor.com/view/goodbye-chat-nep-neptunia-neptune-gif-20677824')
         sys.exit("\n exited")
-client.run(TOKEN)
+client.run("OTU5MDM5NDIzMzU2NDc3NTAw.YkWFEA.LIIffq4hY2F0kyAPBeQmNr8DKEg")
