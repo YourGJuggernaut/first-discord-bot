@@ -20,7 +20,7 @@ async def on_message(message):
         await message.channel.send('https://tenor.com/view/nep-anime-gif-9559443')
 
     if message.content.startswith('!nep kiss'):
-        await message.channel.send('a')
+        await message.channel.send('https://cdn.discordapp.com/attachments/959118138878857267/959210805461680218/unknown.png')
 
     if message.content.startswith('!nep Portal') or message.content.startswith('!portal') or message.content.startswith('!nep portalshake'):
         await message.channel.send('https://cdn.discordapp.com/attachments/862787478993633303/959190281620717588/image0.gif')
