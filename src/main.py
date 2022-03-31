@@ -15,6 +15,12 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+    if message.content.startswith('!nep close'):
+        await message.channel.send('https://tenor.com/view/nep-anime-gif-9559443')
+
+    if message.content.startswith('!nep kiss'):
+        await message.channel.send('a')
+
     if message.content.startswith('!nep Portal') or message.content.startswith('!portal') or message.content.startswith('!nep portalshake'):
         await message.channel.send('https://cdn.discordapp.com/attachments/862787478993633303/959190281620717588/image0.gif')
 
