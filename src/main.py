@@ -3,7 +3,7 @@ import os
 import discord
 import random
 
-TOKEN = "OTU5MDM5NDIzMzU2NDc3NTAw.YkWFEA.YfOwls-bINLvq6gepqP5xFN4akE"
+TOKEN = "OTU5MDM5NDIzMzU2NDc3NTAw.YkWFEA.2LCvfE1-Qw1MoU3UoYz6uW5i550"
 
 client = discord.Client()
 
@@ -115,4 +115,4 @@ async def on_message(message):
         await message.delete()
         await message.channel.send('Exiting Bot.. https://tenor.com/view/goodbye-chat-nep-neptunia-neptune-gif-20677824')
         sys.exit("\n exited")
-client.run(TOKEN)
+client.run('OTU5MDM5NDIzMzU2NDc3NTAw.YkWFEA.2LCvfE1-Qw1MoU3UoYz6uW5i550')
