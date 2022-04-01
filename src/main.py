@@ -24,6 +24,7 @@ async def on_message(message):
         await message.channel.send(random.choice(('https://cdn.discordapp.com/attachments/959206269665816576/959216741056139314/nepgear_and_if_neptune_and_1_more_drawn_by_tsunako__b80c64c22437faaf59b463f414746e5e.png', 'https://cdn.discordapp.com/attachments/959206269665816576/959216740678647828/neptune_and_noire_neptune_drawn_by_ge_b__a875582698db0a7db1c48766df17de3f.jpg', 'https://cdn.discordapp.com/attachments/959206269665816576/959216740359868486/purple_heart_and_noire_neptune_drawn_by_hatyo__4c7738dcb8c389e820831ef4f16d5989.png')))
 
     if message.content.startswith('!nep Portal') or message.content.startswith('!portal') or message.content.startswith('!nep portalshake'):
+        await message.kiss()
         await message.channel.send('https://cdn.discordapp.com/attachments/862787478993633303/959190281620717588/image0.gif')
 
     if message.content.startswith('Fuck you') or message.content.startswith('Fuck') or message.content.startswith('!nep default dance'):
