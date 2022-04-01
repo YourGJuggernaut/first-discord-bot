@@ -3,7 +3,7 @@ import os
 import discord
 import random
 
-TOKEN = "****************************************************"
+TOKEN = ""
 
 client = discord.Client()
 
