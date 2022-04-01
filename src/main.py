@@ -62,7 +62,7 @@ async def on_message(message):
     if message.content.startswith('!nep cmds'):
         await message.channel.send('All Commands: \n'
 '(Dont Forget to Use !nep on some[e.g. Fuck you, !nep eat, hee hee hee haw... etc.]) \n'
-'!nep kiss - nep kiss! \n'
+'!nep kiss - nep kiss! (Suggestion by Bun Bun#4827) \n'
 '!nep portal, !portal, !nep portalshake - Portal does the funi \n'
 'nep nep, - See for yourself \n'
 'Fuck you - Nep dances, \n'
