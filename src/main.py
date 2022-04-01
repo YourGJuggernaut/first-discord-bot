@@ -112,7 +112,7 @@ async def on_message(message):
         await message.delete()
         await message.channel.send('Nep nepu nepu nepu nep nep nep https://www.youtube.com/watch?v=EKxio8HZiNA')
 
-    if message.content.startswith('!portalexit'):
+    if message.content.startswith('!nepportalexit'):
         await message.delete()
         await message.channel.send('Exiting Bot.. https://tenor.com/view/goodbye-chat-nep-neptunia-neptune-gif-20677824')
         sys.exit("\n exited")
