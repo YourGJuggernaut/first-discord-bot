@@ -2,8 +2,15 @@ import sys
 import os
 import discord
 import random
+from random import seed
+from random import randint
+# seed random number generator
+seed(1)
+# generate some integers
+for _ in range(10):
+	value = randint(0, 10)
 
-TOKEN = ""
+TOKEN = "g"
 
 client = discord.Client()
 
@@ -17,6 +24,9 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+    if message.content.startswith('!nep i hate you'):
+        await message.channel.send(random.choice(('i hate you', 'i hate you 2', 'i hate you 3', 'i hate you 4', 'i hate you 5', 'i hate you 6', 'i hate you 7', 'i hate you 8', 'i hate you 9', 'i hate you 10')))
+
     if message.content.startswith('!nep close'):
         await message.channel.send('https://tenor.com/view/nep-anime-gif-9559443')
 
@@ -24,7 +34,11 @@ async def on_message(message):
         await message.channel.send(random.choice(('https://cdn.discordapp.com/attachments/959206269665816576/959216741056139314/nepgear_and_if_neptune_and_1_more_drawn_by_tsunako__b80c64c22437faaf59b463f414746e5e.png', 'https://cdn.discordapp.com/attachments/959206269665816576/959216740678647828/neptune_and_noire_neptune_drawn_by_ge_b__a875582698db0a7db1c48766df17de3f.jpg', 'https://cdn.discordapp.com/attachments/959206269665816576/959216740359868486/purple_heart_and_noire_neptune_drawn_by_hatyo__4c7738dcb8c389e820831ef4f16d5989.png')))
 
     if message.content.startswith('!nep Portal') or message.content.startswith('!portal') or message.content.startswith('!nep portalshake'):
+<<<<<<< HEAD
+        await message.delete()
+=======
         await message.kiss()
+>>>>>>> a9be3aee6c3251b0836a10e77fba6bf7a8a93ba7
         await message.channel.send('https://cdn.discordapp.com/attachments/862787478993633303/959190281620717588/image0.gif')
 
     if message.content.startswith('Fuck you') or message.content.startswith('Fuck') or message.content.startswith('!nep default dance'):
@@ -57,12 +71,13 @@ async def on_message(message):
         await message.delete()
         await message.channel.send('https://tenor.com/view/neptune-neppy-nep-neptunia-slap-gif-12773268')
 
-    if message.content.startswith('!nep Laugh') or message.content.startswith('!nep lmao') or message.content.startswith('!nep lol'):
+    if message.content.startswith('!nep laugh') or message.content.startswith('!nep lmao') or message.content.startswith('!nep lol'):
         await message.channel.send('https://tenor.com/view/laugh-neptune-neptunia-nep-gif-7234123')
 
     if message.content.startswith('!nep cmds'):
         await message.channel.send('All Commands: \n'
 '(Dont Forget to Use !nep on some[e.g. Fuck you, !nep eat, hee hee hee haw... etc.]) \n'
+'!nep i hate you - i hate you "(random 2-10 or nothing)" (Suggestion by PortalScout#5458) \n'
 '!nep kiss - nep kiss! (Suggestion by Bun Bun#4827) \n'
 '!nep portal, !portal, !nep portalshake - Portal does the funi \n'
 'nep nep, - See for yourself \n'
@@ -109,7 +124,6 @@ async def on_message(message):
         await message.channel.send('https://cdn.discordapp.com/attachments/723588264803434518/959066447143899136/unknown.png')
 
     if message.content.startswith('nep nep'):
-        await message.delete()
         await message.channel.send('Nep nepu nepu nepu nep nep nep https://www.youtube.com/watch?v=EKxio8HZiNA')
 
     if message.content.startswith('!nepportalexit'):
