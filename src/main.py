@@ -2,19 +2,22 @@ import sys
 import os
 import discord
 import random
+from discord.ext import commands
 
-TOKEN = "***************************************************************************"
+bot = discord.ext.commands.Bot(command_prefix = 'nep');
 
-client = discord.Client()
+TOKEN = "****************************"
 
-@client.event
+
+@bot.event
 async def on_ready():
-    print("{0.user} is now online!, WHAT THE FUCK DID YOU DO".format(client))
+    print("{0.user} is now online!, WHAT THE FUCK DID YOU DO".format(bot))
 
 
-@client.event
+@bot.event
 async def on_message(message):
-    if message.author == client.user:
+    await bot.process_commands(message)
+    if message.author == bot.user:
         return
 
     if message.content.startswith('!nep i hate you'):
@@ -68,6 +71,7 @@ async def on_message(message):
 '(Dont Forget to Use !nep on some[e.g. Fuck you, !nep eat, hee hee hee haw... etc.]) \n'
 '!nep i hate you - i hate you "(random 2-10 or nothing)" (Suggestion by PortalScout#5458) \n'
 '!nep kiss - nep kiss! (Suggestion by Bun Bun#4827) \n'
+'nepsay (something) - nep says what u said  \n'
 '!nep portal, !portal, !nep portalshake - Portal does the funi \n'
 'nep nep, - See for yourself \n'
 'Fuck you - Nep dances, \n'
@@ -119,4 +123,10 @@ async def on_message(message):
         await message.delete()
         await message.channel.send('Exiting Bot.. https://tenor.com/view/goodbye-chat-nep-neptunia-neptune-gif-20677824')
         sys.exit("\n exited")
-client.run(TOKEN)
+
+
+@bot.command()
+async def say(ctx, *, arg):
+        await ctx.message.delete()
+        await ctx.message.channel.send(arg)
+bot.run(TOKEN)
