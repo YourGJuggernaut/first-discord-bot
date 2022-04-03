@@ -6,7 +6,7 @@ from discord.ext import commands
 
 bot = discord.ext.commands.Bot(command_prefix = 'nep');
 
-TOKEN = "****************************"
+TOKEN = "********************************.****-*************c"
 
 
 @bot.event
@@ -127,6 +127,8 @@ async def on_message(message):
 
 @bot.command()
 async def say(ctx, *, arg):
+
         await ctx.message.delete()
         await ctx.message.channel.send(arg)
+
 bot.run(TOKEN)
