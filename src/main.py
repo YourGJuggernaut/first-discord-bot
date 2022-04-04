@@ -6,7 +6,7 @@ from discord.ext import commands
 
 bot = discord.ext.commands.Bot(command_prefix = 'nep');
 
-TOKEN = "********************************.****-*************c"
+TOKEN = "abcdef123456-**************************-*********************************"
 
 
 @bot.event
